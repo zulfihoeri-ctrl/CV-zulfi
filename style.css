@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #3b82f6;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --card-bg: #ffffff;
+  --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  color: #334155;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Container Utama */
+article {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 620px;
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+hr {
+  border: none;
+  height: 4px;
+  width: 50px;
+  background: var(--primary-color);
+  margin: 10px auto 25px;
+  border-radius: 10px;
+}
+
+h2, h3 {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+/* Container Profil */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.profile-img {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* === VARIASI TIAP BARIS PROFIL === */
+.profile-info p {
+  font-size: 13.5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.profile-info p strong {
+  min-width: 70px;
+}
+
+/* Baris 1: Nama (Biru) */
+.profile-info p:nth-child(1) {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border-left: 4px solid #3b82f6;
+}
+
+/* Baris 2: Prodi (Ungu) */
+.profile-info p:nth-child(2) {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border-left: 4px solid #a855f7;
+}
+
+/* Baris 3: Kelas (Hijau) */
+.profile-info p:nth-child(3) {
+  background-color: #f0fdf4;
+  color: #166534;
+  border-left: 4px solid #22c55e;
+}
+
+/* Baris 4: Alamat (Oranye) */
+.profile-info p:nth-child(4) {
+  background-color: #fff7ed;
+  color: #9a3412;
+  border-left: 4px solid #f97316;
+}
+
+/* Hover Effect Baris Profil */
+.profile-info p:hover {
+  transform: translateX(5px);
+}
+
+/* === VARIASI TIAP BARIS PENDIDIKAN === */
+.education-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.education-section li {
+  position: relative;
+  padding: 10px 14px 10px 38px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.education-section li::before {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+/* Baris 1: SD */
+.education-section li:nth-child(1) {
+  background: #f1f5f9;
+  color: #334155;
+  border-left: 3px solid #64748b;
+}
+.education-section li:nth-child(1)::before { content: "🏫"; }
+
+/* Baris 2: MTs */
+.education-section li:nth-child(2) {
+  background: #f0fdfa;
+  color: #0f766e;
+  border-left: 3px solid #14b8a6;
+}
+.education-section li:nth-child(2)::before { content: "📚"; }
+
+/* Baris 3: SMA */
+.education-section li:nth-child(3) {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 3px solid #ef4444;
+}
+.education-section li:nth-child(3)::before { content: "🎒"; }
+
+/* Baris 4: Kuliah */
+.education-section li:nth-child(4) {
+  background: #f0f9ff;
+  color: #075985;
+  border-left: 3px solid #0ea5e9;
+  font-weight: 600;
+}
+.education-section li:nth-child(4)::before { content: "🎓"; }
+
+/* Hover Effect Baris Pendidikan */
+.education-section li:hover {
+  transform: translateX(6px);
+  filter: brightness(0.97);
+}
+
+/* Responsif */
+@media (max-width: 500px) {
+  .profile-section {
+    flex-direction: column;
+  }
+
+}
